@@ -13,31 +13,46 @@ body {
   -------------------------------------------------- */
   
   /* Carousel base class */
-  .carousel {
-    margin-bottom: 4rem;
+  .carousel  /*slider */
+  {
+    position: relative;
   }
-  /* Since positioning the image, we need to help out the caption */
-  .carousel-caption {
-    z-index: 10;
-    bottom: 3rem;
-    font-weight: bolder;
-  }
-  
-  /* Declare heights because of positioning of img element */
-  .carousel-item {
-    height: 32rem;
-    
-    object-fit: cover;
-  }
-  .carousel-item > img {
+  .carousel .carousel-indicators	/* indicator wrapper*/
+  {
     position: absolute;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 32rem;
+    bottom: 0;
+    left:0px;
+    width: 100%;
+      margin: 0;
+      left: 0;
+     right: 0;
+     width: 100%;
+     display: flex;	/* this is for indicators  */
+  }
+  #headcarousel_container .carousel-indicators li /* indicators*/
+  {
+    flex-grow: 1;  /* make all indicator li similarly stretched */
+    height: 40px;
+    border-radius: 2px;	
   }
   
+  #headcarousel_container .carousel-indicators li.active
+  {
+    background-color:rgba(251,222,87,0.5) ;/* changes indicators color when it is active*/ 
+  }
+  .carousel .carousel-inner .item img
+  {
+    width: 100%;
+    height: 100vh;
+    object-fit: fill; 
+  }
+
+  .slidepic
+  {
+    height: 500px;
+    width: 100%;
+    display: flex;
+  }
   
   /* MARKETING CONTENT
   -------------------------------------------------- */
